@@ -1,0 +1,41 @@
+@import '../../assets/scss/index.scss';
+
+.breadcrumb {
+    padding: 4px 0;
+    margin: 24px 0;
+
+    &-listing {
+        @include d_flex;
+        justify-content: flex-start;
+        list-style-type: none;
+    }
+
+    &-list {
+        @extend .body_2;
+        font-style: italic;
+        color: $body;
+        position: relative;
+
+        &:not(:first-child) {
+            margin-left: 20px;
+
+            &:before {
+                content: '/';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -12px;
+            }
+        }
+    }
+
+    &-item {
+        color: $primary_700;
+        transition: all .3s ease-in;
+
+        &:hover,
+        &:focus {
+            color: $primary_900;
+        }
+    }
+}

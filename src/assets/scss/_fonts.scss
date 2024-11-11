@@ -1,0 +1,175 @@
+$font-path: './fonts/';
+
+// import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$cormorant: "Cormorant Garamond", serif;
+$lato: "Lato", sans-serif;
+
+// Cormorant
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-Light.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-Regular.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-Medium.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 600;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-SemiBold.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-Bold.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 300;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-LightItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 400;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-Italic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 500;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 600;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-SemiBoldItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 700;
+    src: url('#{$font-path}Cormorant_Garamond/CormorantGaramond-BoldItalic.ttf') format('ttf');
+    font-display: swap;
+}
+  
+
+// Lato
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: url('#{$font-path}Lato/Lato-Thin.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}Lato/Lato-Light.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}Lato/Lato-Regular.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}Lato/Lato-Bold.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('#{$font-path}Lato/Lato-Black.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 100;
+    src: url('#{$font-path}Lato/Lato-ThinItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 300;
+    src: url('#{$font-path}Lato/Lato-LightItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: url('#{$font-path}Lato/Lato-Italic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: url('#{$font-path}Lato/Lato-BoldItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 900;
+    src: url('#{$font-path}Lato/Lato-BlackItalic.ttf') format('ttf');
+    font-display: swap;
+}
+
+body {
+    font-family: $lato;
+}

@@ -1,0 +1,210 @@
+@import '../../assets/scss/index.scss';
+
+.singleProduct {
+    @include d_flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    &-left {
+        flex: 0 0 70%;
+        max-width: calc(70% - 10px);
+
+        @media (max-width: 1199px) {
+            flex: 0 0 60%;
+            max-width: calc(60% - 10px);
+        }
+
+        @media (max-width: 767px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            order: 1;
+        }
+    }
+    
+    &-right {
+        flex: 0 0 30%;
+        max-width: calc(30% - 10px);
+
+        @media (max-width: 1199px) {
+            flex:  0 0 40%;
+            max-width: calc(40% - 10px);
+        }
+
+        @media (max-width: 767px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            order: 0;
+        }
+    }
+
+    &--imgWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        &-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+
+            @media (max-width: 1199px) {
+                height: 360px;
+            }
+
+            @media (max-width: 767px) {
+                height: 200px;
+            }
+        }
+    }
+
+    &--content {
+        position: relative;
+    }
+
+    &-wishlist {
+        @include d_flex;
+        @extend .md_radius;
+        background-color: $white;
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        box-shadow: $elevation-4;
+        cursor: pointer;
+
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &-title {
+        @extend .heading_1;
+        color: $primary_900;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+        padding-right: 50px;
+    }
+
+    &--info {
+        @include d_flex;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        &-ratingsReviews {
+            @include d_flex;
+            gap: 8px;
+            @extend .sub_heading_2;
+            background: $white;
+            color: $headings;
+            padding: 4px 8px;
+            border-radius: 999px;
+            box-shadow: $elevation-2;
+
+            svg {
+                path {
+                    fill: #feb640;
+                }
+            }
+        }
+    }
+
+    &--ps {
+        @include d_flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        &-price {
+            @extend .heading_5;
+            color: $primary_500;
+            font-weight: 700;
+        }
+
+        &-stock {
+            @extend .body_3;
+            color: $headings;
+
+            span {
+                @extend .body_1;
+                font-weight: 700
+            }
+        }
+    }
+
+    &--colors {
+        @include d_flex;
+        justify-content: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+
+        &-item {
+            width: 20px;
+            height: 20px;
+            background-color: $body;
+            border-radius: 50%;
+        }
+    }
+
+    &-shipping {
+        @extend .body_2;
+        color: $headings;
+    }
+
+    &-desc {
+        @extend .body_2;
+        color: $body;
+        margin-bottom: 16px;
+    }
+
+    &--cc {
+        @include d_flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        &-category,
+        &-company {
+            @extend .body_2;
+            color: $body;
+
+            span {
+                color: $headings;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    &--atc {
+        @include d_flex;
+        @extend .md_radius;
+        @extend .body_1;
+        text-transform: uppercase;
+        background-color: $primary_500;
+        color: $white;
+        padding: 12px;
+        cursor: pointer;
+        margin-top: 40px;
+        box-shadow: $elevation-4;
+        transition: .3s all ease-in;
+
+        &:hover,
+        &:focus {
+            letter-spacing: 2px;
+            box-shadow: $elevation-7;
+        }
+    }
+}

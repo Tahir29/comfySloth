@@ -1,0 +1,17 @@
+@import '../../assets/scss/index.scss';
+
+.footer {
+    margin-top: 20px;
+    
+    &-content {
+        @include d_flex;
+        gap: 12px;
+        padding: 20px 16px;
+        background-color: $primary_50;
+
+        p {
+            @extend .body_2;
+            color: $headings;
+        }
+    }
+}

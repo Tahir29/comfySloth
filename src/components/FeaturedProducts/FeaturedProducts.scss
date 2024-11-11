@@ -1,0 +1,26 @@
+@import '../../assets/scss/index.scss';
+
+.featured {
+    &-title {
+        @extend .heading_1;
+        color: $headings;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &-wrapper {
+        padding-bottom: 50px;
+
+        @media (max-width: 800px) {
+            padding-bottom: 0;
+        }
+    }
+
+    .card {
+        max-width: 440px;
+    }
+
+    .slick-slide {
+        padding: 10px;
+    }
+}

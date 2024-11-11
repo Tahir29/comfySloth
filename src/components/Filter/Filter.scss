@@ -1,0 +1,193 @@
+@import '../../assets/scss/index.scss';
+
+.filter {
+    &-container {
+        padding: 24px 16px;
+        background-color: $white;
+    }
+    
+    &--buttons {
+        @include d_flex;
+        gap: 16px;
+    }
+
+    &-clear {
+        width: 100%;
+        border: none;
+        box-shadow: $elevation-4;
+        flex-basis: 100%;
+
+        &:hover,
+        &:focus {
+            border: none;
+            box-shadow: $elevation-7;
+        }
+    }
+
+    &-close {
+        flex-basis: 100%;
+        
+        @media (min-width: 991px) {
+            display: none !important;
+        }
+    }
+
+    &--group {
+        margin-bottom: 20px;
+
+        &-title {
+            display: block;
+            @extend .sub_heading_1;
+            color: $headings;
+            margin-bottom: 4px;
+        }
+
+        &-input,
+        &-select {
+            @extend .sm_radius;
+            @extend .body_3;
+            color: $black;
+            background-color: $surface_background;
+            border: 2px solid $line;
+            padding: 8px 16px;
+            width: 100%;
+            height: 40px;
+
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                border-color: $primary_500;
+                outline: none;
+            }
+        }
+
+        &-price {
+            width: 100%;
+        }
+    }
+
+    &--sort {
+        display: grid;
+        grid-template-columns: auto auto 1fr auto;
+        align-items: center;
+        gap: 28px;
+        margin-bottom: 24px;
+
+        @media (max-width: 991px) {
+            grid-template-columns: auto auto 1fr auto auto;
+        }
+
+        @media (max-width: 767px) {
+            @include d_flex;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            hr {
+                order: 3;
+                width: 100%;
+            }
+        }
+
+        &-main {
+            @include d_flex;
+            @extend .sm_radius;
+            border: 1px solid $placeholder;
+            background-color: $secondary_background;
+            padding: 4px;
+            cursor: pointer;
+
+            @media (min-width: 991px) {
+                display: none;
+            }
+
+            @media (max-width: 767px) {
+                width: calc(40% - 8px);
+            }
+        }
+
+        &-view {
+            @include d_flex;
+            gap: 8px;
+
+            @media (max-width: 767px) {
+                width: calc(60% - 8px);
+            }
+
+            .view-icon {
+                @include d_flex;
+                @extend .sm_radius;
+                border: 1px solid $placeholder;
+                padding: 4px;
+                cursor: pointer;
+
+                @media (max-width: 767px) {
+                    flex-basis: 100%;
+                }
+
+                &.active {
+                    background-color: $primary_500;
+                    border-color: $primary_500;
+
+                    svg {
+                        path {
+                            fill: $white;
+                            stroke: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-productCount {
+            @extend .body_2;
+            color: $body;
+
+            span {
+                font-weight: 700;
+                color: $headings;
+            }
+
+            @media (max-width: 767px) {
+                order: 4;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &-form {
+
+            @media (max-width: 767px) {
+                order: 5;
+                width: 100%;
+            }
+
+            label {
+                @extend .body_3;
+                color: $headings;
+                margin-right: 8px;
+            }
+
+            .sort-input {
+                @extend .sm_radius;
+                @extend .body_3;
+                color: $black;
+                background-color: $surface_background;
+                border: 2px solid $line;
+                padding: 4px 8px;
+                width: 150px;
+                text-transform: capitalize;
+
+                &:hover,
+                &:focus,
+                &:focus-visible {
+                    border-color: $primary_500;
+                    outline: none;
+                }
+
+                @media (max-width: 767px) {
+                    width: calc(100% - 54px);
+                }
+            }
+        }
+    }
+}
